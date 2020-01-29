@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/04/17 15:51:24.000.071,=C:\Componentes\SW\lib.terceiros\nativexml\NativeXmlUtil.pas</Transaction>
+    <Transaction>2019/04/17 15:54:40.000.813,=C:\Componentes\SW\lib.terceiros\nativexml\source.2010\sdStringTable.pas</Transaction>
+    <Transaction>2019/04/17 15:54:40.000.656,=C:\Componentes\SW\lib.terceiros\nativexml\source.2010\NativeXml.pas</Transaction>
+    <Transaction>2019/04/17 15:54:40.000.693,=C:\Componentes\SW\lib.terceiros\nativexml\source.2010\NativeXmlObjectStorage.pas</Transaction>
+    <Transaction>2019/04/17 15:54:40.000.770,=C:\Componentes\SW\lib.terceiros\nativexml\source.2010\sdSortedLists.pas</Transaction>
+    <Transaction>2019/04/17 15:54:40.000.674,=C:\Componentes\SW\lib.terceiros\nativexml\source.2010\NativeXmlAppend.pas</Transaction>
+    <Transaction>2019/04/17 15:54:40.000.711,=C:\Componentes\SW\lib.terceiros\nativexml\source.2010\NativeXmlWin32Compat.pas</Transaction>
+    <Transaction>2019/04/17 15:54:40.000.789,=C:\Componentes\SW\lib.terceiros\nativexml\source.2010\sdStreams.pas</Transaction>
+    <Transaction>2019/04/17 15:54:40.000.728,=C:\Componentes\SW\lib.terceiros\nativexml\source.2010\sdDebug.pas</Transaction>
+    <Transaction>2019/04/17 15:54:40.000.751,=C:\Componentes\SW\lib.terceiros\nativexml\source.2010\sdFastXml.pas</Transaction>
+    <Transaction>2019/04/17 15:59:57.000.407,=C:\Componentes\SW\swlib.inc</Transaction>
+    <Transaction>2019/04/17 16:16:53.000.916,C:\Componentes\SW\swlib.inc=</Transaction>
+    <Transaction>2019/04/17 16:18:00.000.389,=C:\Componentes\SW\swproject.inc</Transaction>
+    <Transaction>2019/04/17 16:18:00.000.356,=C:\Componentes\SW\swlib.inc</Transaction>
+    <Transaction>2019/04/17 16:24:47.000.492,=C:\Componentes\SW\lib.terceiros\nativexml\source.2010\swdbdrive.inc</Transaction>
+    <Transaction>2019/04/17 16:24:47.000.528,=C:\Componentes\SW\lib.terceiros\nativexml\source.2010\swlib.inc</Transaction>
+    <Transaction>2019/04/17 16:24:47.000.466,=C:\Componentes\SW\lib.terceiros\nativexml\source.2010\simdesign.inc</Transaction>
+    <Transaction>2020/01/17 11:08:49.000.906,C:\Componentes\SW\lib.terceiros\nativexml\NativeXmlUtil.pas=</Transaction>
+    <Transaction>2020/01/17 11:08:54.000.072,C:\Componentes\SW\lib.terceiros\nativexml\source.2010\swlib.inc=</Transaction>
+    <Transaction>2020/01/17 11:08:59.000.237,C:\Componentes\SW\lib.terceiros\nativexml\source.2010\swdbdrive.inc=</Transaction>
+    <Transaction>2020/01/17 11:09:03.000.060,C:\Componentes\SW\lib.terceiros\nativexml\source.2010\simdesign.inc=</Transaction>
+    <Transaction>2020/01/17 11:09:06.000.899,C:\Componentes\SW\lib.terceiros\nativexml\source.2010\sdStringTable.pas=</Transaction>
+    <Transaction>2020/01/17 11:09:10.000.519,C:\Componentes\SW\lib.terceiros\nativexml\source.2010\sdStreams.pas=</Transaction>
+    <Transaction>2020/01/17 11:09:15.000.622,C:\Componentes\SW\lib.terceiros\nativexml\source.2010\sdSortedLists.pas=</Transaction>
+    <Transaction>2020/01/17 11:09:19.000.398,C:\Componentes\SW\lib.terceiros\nativexml\source.2010\sdFastXml.pas=</Transaction>
+    <Transaction>2020/01/17 11:09:23.000.642,C:\Componentes\SW\lib.terceiros\nativexml\source.2010\sdDebug.pas=</Transaction>
+    <Transaction>2020/01/17 11:09:27.000.465,C:\Componentes\SW\lib.terceiros\nativexml\source.2010\NativeXmlWin32Compat.pas=</Transaction>
+    <Transaction>2020/01/17 11:09:31.000.429,C:\Componentes\SW\lib.terceiros\nativexml\source.2010\NativeXmlObjectStorage.pas=</Transaction>
+    <Transaction>2020/01/17 11:09:35.000.158,C:\Componentes\SW\lib.terceiros\nativexml\source.2010\NativeXmlAppend.pas=</Transaction>
+    <Transaction>2020/01/17 11:09:39.000.590,C:\Componentes\SW\lib.terceiros\nativexml\source.2010\NativeXml.pas=</Transaction>
+    <Transaction>2020/01/17 11:11:33.000.865,=C:\Componentes\NativeXml\src\NativeXml.pas</Transaction>
+    <Transaction>2020/01/17 11:12:53.000.463,=C:\Componentes\NativeXml\general\sdStreams.pas</Transaction>
+    <Transaction>2020/01/17 11:13:03.000.886,=C:\Componentes\NativeXml\general\sdStringTable.pas</Transaction>
+    <Transaction>2020/01/17 11:13:11.000.844,=C:\Componentes\NativeXml\general\sdDebug.pas</Transaction>
+    <Transaction>2020/01/17 11:15:12.000.767,=C:\Componentes\NativeXml\src\simdesign.inc</Transaction>
+    <Transaction>2020/01/17 11:18:10.000.453,C:\Componentes\NativeXml\src\simdesign.inc=</Transaction>
+    <Transaction>2020/01/17 11:18:26.000.759,C:\Componentes\NativeXml\src\NativeXml.pas=</Transaction>
+    <Transaction>2020/01/17 11:18:31.000.863,C:\Componentes\NativeXml\general\sdStringTable.pas=</Transaction>
+    <Transaction>2020/01/17 11:18:36.000.013,C:\Componentes\NativeXml\general\sdStreams.pas=</Transaction>
+    <Transaction>2020/01/17 11:18:39.000.835,C:\Componentes\NativeXml\general\sdDebug.pas=</Transaction>
+    <Transaction>2020/01/17 11:51:19.000.652,C:\Componentes\open-source\DORM\branches\attr_mapping\lib\superobject\superobject.pas=</Transaction>
+    <Transaction>2020/01/17 11:52:50.000.918,C:\Componentes\cdb\adapter.UniDAC.Factory.pas=</Transaction>
+  </Transactions>
+</BorlandProject>

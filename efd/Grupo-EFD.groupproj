@@ -1,0 +1,36 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{3CB9801D-E370-40CE-8A3F-1798F45DF0D2}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="GeradorSpedEFD.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="GeradorSpedEFD">
+			<MSBuild Projects="GeradorSpedEFD.dproj"/>
+		</Target>
+		<Target Name="GeradorSpedEFD:Clean">
+			<MSBuild Targets="Clean" Projects="GeradorSpedEFD.dproj"/>
+		</Target>
+		<Target Name="GeradorSpedEFD:Make">
+			<MSBuild Targets="Make" Projects="GeradorSpedEFD.dproj"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="GeradorSpedEFD"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="GeradorSpedEFD:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="GeradorSpedEFD:Make"/>
+		</Target>
+		<Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+	</Project>

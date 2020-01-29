@@ -1,0 +1,747 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{4e870002-804a-4e1c-b277-f2e6c0445a66}</ProjectGuid>
+        <MainSource>GeradorSpedEFD.dpr</MainSource>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+        <DCC_DependencyCheckOutputName>exe\GeradorSPED.exe</DCC_DependencyCheckOutputName>
+        <ProjectVersion>18.2</ProjectVersion>
+        <Config Condition="'$(Config)'==''">Debug</Config>
+        <FrameworkType>VCL</FrameworkType>
+        <Base>True</Base>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+        <TargetedPlatforms>1025</TargetedPlatforms>
+        <AppType>Application</AppType>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+        <Base_Win64>true</Base_Win64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+        <Cfg_1_Win32>true</Cfg_1_Win32>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='iOSDevice64' and '$(Cfg_2)'=='true') or '$(Cfg_2_iOSDevice64)'!=''">
+        <Cfg_2_iOSDevice64>true</Cfg_2_iOSDevice64>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+        <Cfg_2_Win32>true</Cfg_2_Win32>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <SanitizedProjectName>GeradorSpedEFD</SanitizedProjectName>
+        <VerInfo_Keys>CompanyName=Neway Sistemas Ltda;FileDescription=Neway gerador de arquivos EFD do SPED;FileVersion=2.0.1.1023;InternalName=GeradorSpedEFD.exe;LegalCopyright=Copyright (c) 2005,2014 Neway Sistemas Ltda;LegalTrademarks=;OriginalFilename=GeradorSpedEFD.exe;ProductName=Gerador de SPED Fiscal;ProductVersion=2.0.0.0;Comments=By Carlos Gonzaga</VerInfo_Keys>
+        <VerInfo_Release>1</VerInfo_Release>
+        <VerInfo_MajorVer>2</VerInfo_MajorVer>
+        <DCC_Namespace>Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;Winapi;System.Win;$(DCC_Namespace)</DCC_Namespace>
+        <VerInfo_AutoGenVersion>true</VerInfo_AutoGenVersion>
+        <VerInfo_Build>1023</VerInfo_Build>
+        <VerInfo_Locale>1046</VerInfo_Locale>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <BRCC_IncludePath>D:\develop\lib\delphi\components\open-source\DORM\branches\attr_mapping\lib\superobject;$(BRCC_IncludePath)</BRCC_IncludePath>
+        <DCC_UsePackage>vclx;vcl;vclimg;dbrtl;Rave77VCL;bdertl;rtl;vclactnband;vcldb;vcldbx;vcltouch;xmlrtl;dsnap;dsnapcon;TeeUI;TeeDB;Tee;adortl;IndyCore;IndySystem;IndyProtocols;VclSmp;vclie;inet;websnap;webdsnap;inetdb;inetdbbde;inetdbxpress;soaprtl;dbexpress;DbxCommonDriver;DataSnapIndy10ServerTransport;DataSnapProviderClient;DbxClientDriver;DataSnapServer;DBXInterBaseDriver;DBXMySQLDriver;dbxcds;DBXFirebirdDriver;DBXSybaseASEDriver;DBXSybaseASADriver;DBXOracleDriver;DBXMSSQLDriver;DBXInformixDriver;DBXDb2Driver;Jcl;JvCore;JvBands;JclVcl;JvManagedThreads;JvStdCtrls;JvSystem;JvWizards;JvXPCtrls;unidacvcl140;unidac140;dacvcl140;dac140;$(DCC_UsePackage)</DCC_UsePackage>
+        <DCC_ExeOutput>bin\</DCC_ExeOutput>
+        <DCC_DependencyCheckOutputName>bin\GeradorSpedEFD.exe</DCC_DependencyCheckOutputName>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(ModuleName)</VerInfo_Keys>
+        <BT_BuildType>Debug</BT_BuildType>
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+        <DCC_Namespace>Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
+        <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <Icon_MainIcon>GeradorSpedEFD_Icon1.ico</Icon_MainIcon>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win64)'!=''">
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+        <Icon_MainIcon>GeradorSpedEFD_Icon1.ico</Icon_MainIcon>
+        <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
+        <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <DCC_DependencyCheckOutputName>exe\GeradorSpedEFD.exe</DCC_DependencyCheckOutputName>
+        <Version>7.0</Version>
+        <DCC_DebugInformation>0</DCC_DebugInformation>
+        <DCC_LocalDebugSymbols>False</DCC_LocalDebugSymbols>
+        <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+        <DCC_ExeOutput>exe</DCC_ExeOutput>
+        <DCC_DcuOutput>dcu</DCC_DcuOutput>
+        <DCC_ObjOutput>dcu</DCC_ObjOutput>
+        <DCC_HppOutput>dcu</DCC_HppOutput>
+        <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <AppEnableHighDPI>true</AppEnableHighDPI>
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <Version>7.0</Version>
+        <DCC_DcuOutput>dcu</DCC_DcuOutput>
+        <DCC_ObjOutput>dcu</DCC_ObjOutput>
+        <DCC_HppOutput>dcu</DCC_HppOutput>
+        <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_iOSDevice64)'!=''">
+        <BT_BuildType>Debug</BT_BuildType>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <DCC_UnitSearchPath>C:\Componentes\NativeXml\src;C:\Componentes\NativeXml\general;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DCC_ExeOutput>C:\Neway\Sped</DCC_ExeOutput>
+        <VerInfo_Release>0</VerInfo_Release>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <VerInfo_Build>0</VerInfo_Build>
+        <VerInfo_MajorVer>1</VerInfo_MajorVer>
+        <AppEnableHighDPI>true</AppEnableHighDPI>
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName)</VerInfo_Keys>
+    </PropertyGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+        <Borland.ProjectType>VCLApplication</Borland.ProjectType>
+        <BorlandProject>
+            <Delphi.Personality>
+                <Parameters>
+                    <Parameters Name="UseLauncher">False</Parameters>
+                    <Parameters Name="LoadAllSymbols">True</Parameters>
+                    <Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+                </Parameters>
+                <VersionInfo>
+                    <VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+                    <VersionInfo Name="AutoIncBuild">True</VersionInfo>
+                    <VersionInfo Name="MajorVer">2</VersionInfo>
+                    <VersionInfo Name="MinorVer">0</VersionInfo>
+                    <VersionInfo Name="Release">1</VersionInfo>
+                    <VersionInfo Name="Build">1023</VersionInfo>
+                    <VersionInfo Name="Debug">False</VersionInfo>
+                    <VersionInfo Name="PreRelease">False</VersionInfo>
+                    <VersionInfo Name="Special">False</VersionInfo>
+                    <VersionInfo Name="Private">False</VersionInfo>
+                    <VersionInfo Name="DLL">False</VersionInfo>
+                    <VersionInfo Name="Locale">1046</VersionInfo>
+                    <VersionInfo Name="CodePage">1252</VersionInfo>
+                </VersionInfo>
+                <VersionInfoKeys>
+                    <VersionInfoKeys Name="CompanyName">Neway Sistemas Ltda</VersionInfoKeys>
+                    <VersionInfoKeys Name="FileDescription">Neway gerador de arquivos EFD do SPED</VersionInfoKeys>
+                    <VersionInfoKeys Name="FileVersion">2.0.1.1023</VersionInfoKeys>
+                    <VersionInfoKeys Name="InternalName">GeradorSpedEFD.exe</VersionInfoKeys>
+                    <VersionInfoKeys Name="LegalCopyright">Copyright (c) 2005,2014 Neway Sistemas Ltda</VersionInfoKeys>
+                    <VersionInfoKeys Name="LegalTrademarks"/>
+                    <VersionInfoKeys Name="OriginalFilename">GeradorSpedEFD.exe</VersionInfoKeys>
+                    <VersionInfoKeys Name="ProductName">Gerador de SPED Fiscal</VersionInfoKeys>
+                    <VersionInfoKeys Name="ProductVersion">2.0.0.0</VersionInfoKeys>
+                    <VersionInfoKeys Name="Comments">By Carlos Gonzaga</VersionInfoKeys>
+                </VersionInfoKeys>
+                <Source>
+                    <Source Name="MainSource">GeradorSpedEFD.dpr</Source>
+                </Source>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\bcboffice2k240.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\bcbofficexp240.bpl">Embarcadero C++Builder Office XP Servers Package</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k240.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Nevrona\Rave11\RvDesign110.bpl">Rave Design-time Library</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Nevrona\Rave11\vcl170.bpl">Embarcadero Visual Component Library</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Nevrona\Rave11\RvGraphics110.bpl">Rave Graphics Components</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Nevrona\Rave11\RvEngine110.bpl">Rave Language Engine</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Nevrona\Rave11\RvReport110.bpl">Rave Report Components</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Nevrona\Rave11\RvStandard110.bpl">Rave Standard Components</Excluded_Packages>
+                </Excluded_Packages>
+            </Delphi.Personality>
+            <ModelSupport>False</ModelSupport>
+            <Platforms>
+                <Platform value="iOSDevice64">True</Platform>
+                <Platform value="Win32">True</Platform>
+                <Platform value="Win64">False</Platform>
+            </Platforms>
+            <Deployment Version="3">
+                <DeployFile LocalName="bin\GeradorSpedEFD.exe" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>GeradorSpedEFD.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="C:\Componentes\SW\swlib.inc" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="C:\Componentes\SW\swproject.inc" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployClass Name="ProjectiOSDeviceResourceRules"/>
+                <DeployClass Name="ProjectOSXResource">
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\Resources</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidClassesDexFile">
+                    <Platform Name="Android">
+                        <RemoteDir>classes</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AdditionalDebugSymbols">
+                    <Platform Name="Win32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_Launch768">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon144">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-xxhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidLibnativeMipsFile">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\mips</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Required="true" Name="ProjectOutput">
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="Linux64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="DependencyFramework">
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <Operation>1</Operation>
+                        <Extensions>.framework</Extensions>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectUWPManifest">
+                    <Platform Name="Win32">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win64">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Launch640">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_Launch1024">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectiOSDeviceDebug">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).app.dSYM\Contents\Resources\DWARF</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <RemoteDir>..\$(PROJECTNAME).app.dSYM\Contents\Resources\DWARF</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Launch320">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectiOSInfoPList"/>
+                <DeployClass Name="AndroidLibnativeArmeabiFile">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\armeabi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="DebugSymbols">
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_Launch1536">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_SplashImage470">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-normal</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon96">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-xhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_SplashImage640">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-large</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Launch640x1136">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="UWP_DelphiLogo44">
+                    <Platform Name="Win32">
+                        <RemoteDir>Assets</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win64">
+                        <RemoteDir>Assets</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectiOSEntitlements"/>
+                <DeployClass Name="Android_LauncherIcon72">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-hdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidGDBServer">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectOSXInfoPList"/>
+                <DeployClass Name="ProjectOSXEntitlements"/>
+                <DeployClass Name="UWP_DelphiLogo150">
+                    <Platform Name="Win32">
+                        <RemoteDir>Assets</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Win64">
+                        <RemoteDir>Assets</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_Launch2048">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidSplashStyles">
+                    <Platform Name="Android">
+                        <RemoteDir>res\values</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_SplashImage426">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-small</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidSplashImageDef">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectiOSResource">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectAndroidManifest">
+                    <Platform Name="Android">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_DefaultAppIcon">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="File">
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="Android">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>0</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidServiceOutput">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Required="true" Name="DependencyPackage">
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                        <Extensions>.bpl</Extensions>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon48">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-mdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_SplashImage960">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-xlarge</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon36">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-ldpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="DependencyModule">
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                        <Extensions>.dll;.bpl</Extensions>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                </DeployClass>
+                <ProjectRoot Platform="iOSDevice64" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="Win64" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="iOSDevice32" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="Linux64" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="Win32" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="OSX32" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="Android" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="iOSSimulator" Name="$(PROJECTNAME).app"/>
+            </Deployment>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <ItemGroup>
+        <DelphiCompile Include="$(MainSource)">
+            <MainSource>MainSource</MainSource>
+        </DelphiCompile>
+        <DCCReference Include="C:\Projetos Berlim\Neway\units_compartilhadas\gonzaga\cdb\uunidac.pas"/>
+        <DCCReference Include="units\EFD00.pas"/>
+        <DCCReference Include="units\EFDCommon.pas"/>
+        <DCCReference Include="units\EFDUtils.pas"/>
+        <DCCReference Include="..\efd-fiscal\units\uefd_fiscal.pas"/>
+        <DCCReference Include="..\efd-fiscal\units\ufisbloco_0.pas"/>
+        <DCCReference Include="..\efd-fiscal\units\ufisbloco_1.pas"/>
+        <DCCReference Include="..\efd-fiscal\units\ufisbloco_C.pas"/>
+        <DCCReference Include="..\efd-fiscal\units\ufisbloco_D.pas"/>
+        <DCCReference Include="..\efd-fiscal\units\ufisbloco_E.pas"/>
+        <DCCReference Include="..\efd-fiscal\units\ufisbloco_G.pas"/>
+        <DCCReference Include="..\efd-fiscal\units\ufisbloco_H.pas"/>
+        <DCCReference Include="..\efd-contribuicoes\units\uctrbloco_0.pas"/>
+        <DCCReference Include="..\efd-contribuicoes\units\uctrbloco_1.pas"/>
+        <DCCReference Include="..\efd-contribuicoes\units\uctrbloco_A.pas"/>
+        <DCCReference Include="..\efd-contribuicoes\units\uctrbloco_C.pas"/>
+        <DCCReference Include="..\efd-contribuicoes\units\uctrbloco_D.pas"/>
+        <DCCReference Include="..\efd-contribuicoes\units\uctrbloco_F.pas"/>
+        <DCCReference Include="..\efd-contribuicoes\units\uctrbloco_M.pas"/>
+        <DCCReference Include="..\efd-contribuicoes\units\uefd_contrib.pas"/>
+        <DCCReference Include="C:\Componentes\cunits\uclass.pas"/>
+        <DCCReference Include="C:\Componentes\cunits\\ulog.pas"/>
+        <DCCReference Include="forms\layout\ulayout01.pas">
+            <Form>frm_layout01</Form>
+        </DCCReference>
+        <DCCReference Include="forms\uprinc01.pas">
+            <Form>frm_princ00</Form>
+        </DCCReference>
+        <DCCReference Include="forms\ucadcontab00.pas">
+            <Form>frm_cadcontab00</Form>
+        </DCCReference>
+        <DCCReference Include="..\efd-fiscal\units\ufisbloco_K.pas"/>
+        <DCCReference Include="..\nfe\unfexml.pas"/>
+        <DCCReference Include="..\nfe\unfeutil.pas"/>
+        <DCCReference Include="..\nfe\ucapicom.pas"/>
+        <DCCReference Include="..\nfe\umsxml.pas"/>
+        <DCCReference Include="..\nfe\unfews.pas"/>
+        <DCCReference Include="..\nfe\unfeeventxml.pas"/>
+        <None Include="C:\Componentes\SW\swlib.inc"/>
+        <None Include="C:\Componentes\SW\swproject.inc"/>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <ItemGroup/>
+    <Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+    <Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
+    <Import Project="$(MSBuildProjectName).deployproj" Condition="Exists('$(MSBuildProjectName).deployproj')"/>
+</Project>
+
+<!-- EurekaLog First Line
+[Exception Log]
+EurekaLog Version=7007
+Activate=0
+Append to Log=0
+AutoCrashOperation=2
+boHandleSafeCallExceptions=1
+boPauseBorlandThreads=0
+boUseMainModuleOptions=1
+cfoUseEL7=0
+Count=0
+csoShowBorlandThreads=1
+csoShowWindowsThreads=1
+DeleteMapAfterCompile=0
+edoShowInDetailedMode=0
+Email Address=""
+EMail Message Line Count=0
+Email Object=""
+Email Send Options=0
+Encrypt Password=""
+Errors Number=32
+Errors Terminate=3
+ExceptionDialogType=2
+Foreground Tab=0
+Freeze Timeout=0
+HTMLLayout Count=15
+HTMLLine0="%U003Chtml%U003E"
+HTMLLine1="  %U003Chead%U003E"
+HTMLLine10="        %U003C/td%U003E"
+HTMLLine11="      %U003C/tr%U003E"
+HTMLLine12="    %U003C/table%U003E"
+HTMLLine13="  %U003C/body%U003E"
+HTMLLine14="%U003C/html%U003E"
+HTMLLine2="  %U003C/head%U003E"
+HTMLLine3="  %U003Cbody TopMargin=10 LeftMargin=10%U003E"
+HTMLLine4="    %U003Ctable width="
+HTMLLine5="      %U003Ctr%U003E"
+HTMLLine6="        %U003Ctd nowrap%U003E"
+HTMLLine7="          %U003Cfont face="
+HTMLLine8="            %U003C%%HTML_TAG%%%U003E"
+HTMLLine9="          %U003C/font%U003E"
+loAppendReproduceText=0
+loCatchLeaks=0
+loFreeAllLeaks=1
+loHideBorlandLeaks=1
+loSaveModulesAndProcessesSections=1
+Output Path=""
+ProxyPassword=""
+ProxyPort=8080
+ProxyURL=""
+ProxyUser=""
+SMTP From="eurekalog@email.com"
+SMTP Host=""
+SMTP Password=""
+SMTP Port=25
+SMTP UserID=""
+sndAddComputerNameInFileName=0
+sndAddDateInFileName=0
+sndSendInSeparatedThread=0
+sndSendScreenshot=1
+sndShowSuccessFailureMsg=0
+sndUseOnlyActiveWindow=0
+soActCtlsControlClass=1
+soActCtlsControlText=1
+soActCtlsFormClass=1
+soActCtlsFormText=1
+soAppCompilationDate=1
+soAppName=1
+soAppParameters=1
+soAppStartDate=1
+soAppUpTime=1
+soAppVersionNumber=1
+soCmpDisplayDPI=1
+soCmpDisplayMode=1
+soCmpFreeDisk=1
+soCmpFreeMemory=1
+soCmpName=1
+soCmpPrinter=1
+soCmpProcessor=1
+soCmpSysUpTime=1
+soCmpTotalDisk=1
+soCmpTotalMemory=1
+soCmpVideoCard=1
+soExcAddress=1
+soExcCount=1
+soExcDate=1
+soExcID=1
+soExcMessage=1
+soExcModuleName=1
+soExcModuleVersion=1
+soExcNote=1
+soExcStatus=1
+soExcType=1
+soNetDHCP=1
+soNetDNS1=1
+soNetDNS2=1
+soNetGateway=1
+soNetIP=1
+soNetSubmask=1
+soOSBuildN=1
+soOSCharset=1
+soOSLanguage=1
+soOSType=1
+soOSUpdate=1
+soUserCompany=1
+soUserID=1
+soUserPrivileges=1
+TextsCollection="English"
+TrakerAssignTo=""
+TrakerCategory=""
+TrakerPassword=""
+TrakerProject=""
+TrakerTrialID=""
+TrakerUser=""
+WebPassword=""
+WebPort=0
+WebSendMode=0
+WebURL=""
+WebUserID=""
+EurekaLog Last Line -->
